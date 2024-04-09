@@ -1,0 +1,28 @@
+HTTrack3.49-2+libhtsjava.so.2 launched on Sat, 06 Apr 2024 12:50:07 at https://zrtechsolutions.com/demo/html/technoit/
+(httrack https://zrtechsolutions.com/demo/html/technoit/ )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+12:51:43	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/porfolio.html (from https://zrtechsolutions.com/demo/html/technoit/)
+12:51:43	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/faq.html (from https://zrtechsolutions.com/demo/html/technoit/)
+12:51:43	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/blogs-details.html (from https://zrtechsolutions.com/demo/html/technoit/)
+12:51:43	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/coming-soon.html (from https://zrtechsolutions.com/demo/html/technoit/)
+12:51:50	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/assets/fonts/fontawesome-webfont.eot?v=4.7.0 (from https://zrtechsolutions.com/demo/html/technoit/assets/stylesheets/font-awesome.min.css)
+12:51:50	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/assets/fonts/fontawesome-webfont.eot? (from https://zrtechsolutions.com/demo/html/technoit/assets/stylesheets/font-awesome.min.css)
+12:51:50	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/assets/fonts/fontawesome-webfont.woff2?v=4.7.0 (from https://zrtechsolutions.com/demo/html/technoit/assets/stylesheets/font-awesome.min.css)
+12:51:50	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/assets/fonts/fontawesome-webfont.woff?v=4.7.0 (from https://zrtechsolutions.com/demo/html/technoit/assets/stylesheets/font-awesome.min.css)
+12:51:50	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/assets/fonts/fontawesome-webfont.ttf?v=4.7.0 (from https://zrtechsolutions.com/demo/html/technoit/assets/stylesheets/font-awesome.min.css)
+12:51:50	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/assets/fonts/fontawesome-webfont.svg?v=4.7.0 (from https://zrtechsolutions.com/demo/html/technoit/assets/stylesheets/font-awesome.min.css)
+12:51:50	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/assets/images/cta-bg.jpg (from https://zrtechsolutions.com/demo/html/technoit/assets/stylesheets/styles.css)
+12:51:50	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/dist/ (from https://zrtechsolutions.com/demo/html/technoit/assets/vendor/aos/aos.js)
+12:51:50	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/l (from https://zrtechsolutions.com/demo/html/technoit/assets/vendor/swiper/swiper-bundle.min.js)
+12:51:50	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/e (from https://zrtechsolutions.com/demo/html/technoit/assets/vendor/swiper/swiper-bundle.min.js)
+12:51:50	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/t.params.url (from https://zrtechsolutions.com/demo/html/technoit/assets/vendor/swiper/swiper-bundle.min.js)
+12:51:50	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/GET (from https://zrtechsolutions.com/demo/html/technoit/assets/javascripts/particles.min.js)
+12:51:50	Error: 	"Not Found" (404) at link https://zrtechsolutions.com/demo/html/technoit/Error pJS - No image.src (from https://zrtechsolutions.com/demo/html/technoit/assets/javascripts/particles.min.js)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 43 seconds : 103 links scanned, 85 files written (5098652 bytes overall) [4405204 bytes received at 42768 bytes/sec], 2522013 bytes transferred using HTTP compression in 65 files, ratio 23%, 26.0 requests per connection
+(17 errors, 0 warnings, 0 messages)
