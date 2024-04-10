@@ -11,12 +11,31 @@
                 </div>
 
                 <!-- Navigation Links -->
+                @if (!Auth::user()->is_admin)
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                </div>                    
+                @endif
+                <!-- Admin Links -->
+                @if (Auth::user()->is_admin)
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('DashdashboardAdmin')" :active="request()->routeIs('DashdashboardAdmin')">
+                        {{ __('Dashboard') }}
+                    </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('blog.index')" :active="request()->routeIs('dashboard')">
+                        {{ __('Blog') }}
+                    </x-nav-link>
+                </div>                   
+                @endif
+                              
+                
+               
             </div>
+            
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">

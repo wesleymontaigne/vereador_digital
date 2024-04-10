@@ -1,0 +1,21 @@
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-radius: 50%;
+    max-width:600px;
+
+  }
+
+  label {
+    cursor: pointer;
+    color: aliceblue;
+    /* Style as you please, it will become the visible UI component. */
+ }
+ 
+ #upload-photo {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+ }
