@@ -549,14 +549,15 @@
           <p>Lorem ipsum dolor sit amet</p>
         </div>
         <div class="row gy-4">
+          @foreach ($blogs as $blog)
           <div class="col-lg-4">
             <article>
               <div class="post-img">
                 <img src="assets/images/blog/blog-1.jpg" alt="" class="img-fluid">
               </div>
-              <p class="post-category">Domain & Hosting</p>
+              <p class="post-category">Domain & My loop</p>
               <h2 class="title">
-                <a href="blog-details.html">How to host website on any hosting provider?</a>
+                <a href="blog-details.html">{{ $blog->title }}</a>
               </h2>
               <div class="d-flex align-items-center">
                 <div class="post-meta">
@@ -568,6 +569,9 @@
               </div>
             </article>
           </div><!-- End post list item -->
+              
+          @endforeach
+         
 
           <div class="col-lg-4">
             <article>

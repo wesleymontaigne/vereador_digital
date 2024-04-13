@@ -16,6 +16,12 @@ class BlogController extends Controller
         return view('blogs.index');
     }
 
+    public function indexView(): View
+    {
+     $blogs = Blog::orderBy('datetime', 'desc')->limit(100)->get();
+     return view('welcome', ['blogs'=>$blogs]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -38,17 +44,18 @@ class BlogController extends Controller
 
         
 
-        // insert image
+        // save image on local disk
         $fileOriginalName = $request->file('photo')->getClientOriginalExtension();
         $image = time() . '.'. $fileOriginalName;
         $request->photo->storeAs('image-blog', $image, 'public');
+        //insert data on DB
         $create = Blog::create([ 
         'title' => $request->titulo,
         'description' => $request->message,
         'photo'=>$image,
         'user_id' => auth()->user()->id,
         ]);
-        // 'user_id' => auth()->user()->id,
+        return redirect()->intended('DashdashboardAdmin');
         
     }
 
