@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Response; 
 use Illuminate\View\View;
-
 use App\Models\Blog;
 use Illuminate\Http\Request;
 
@@ -30,12 +29,23 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+
+        $validated = $request->validate([
+            'message' => 'required|string|max:80',
+            'titulo' => 'required|string|max:4000',
+            'photo' => 'required|max:10000|mimes:png,jpg,jpeg,image'
+        ]);
+
+        dd($validated);
+
+        // insert image
         $fileOriginalName = $request->file('photo')->getClientOriginalExtension();
         $image = time() . '.'. $fileOriginalName;
         $request->photo->storeAs('image-blog', $image, 'public');
         //$path = $request->photo->store('storage/uploads','public');
             dd($request);
-        
+            $create = Blog::create([  ]);
+        // 'user_id' => auth()->user()->id,
         
     }
 

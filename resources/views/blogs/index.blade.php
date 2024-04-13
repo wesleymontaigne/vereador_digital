@@ -9,7 +9,7 @@
                 <img class="img" id="output" src="https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg"/>
                 <label for="upload-photo">Mudar Capa...</label>
                  <input type="file" name="photo" id="upload-photo" 
-                 onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])"/>
+                 onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])" required/>
                 </div>
             </br>
               <!-- titulo do post -->
