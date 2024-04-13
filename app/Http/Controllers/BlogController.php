@@ -36,15 +36,18 @@ class BlogController extends Controller
             'photo' => 'required|max:10000|mimes:png,jpg,jpeg,image'
         ]);
 
-        dd($validated);
+        
 
         // insert image
         $fileOriginalName = $request->file('photo')->getClientOriginalExtension();
         $image = time() . '.'. $fileOriginalName;
         $request->photo->storeAs('image-blog', $image, 'public');
-        //$path = $request->photo->store('storage/uploads','public');
-            dd($request);
-            $create = Blog::create([  ]);
+        $create = Blog::create([ 
+        'title' => $request->titulo,
+        'description' => $request->message,
+        'photo'=>$image,
+        'user_id' => auth()->user()->id,
+        ]);
         // 'user_id' => auth()->user()->id,
         
     }
