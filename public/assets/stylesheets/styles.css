@@ -3533,3 +3533,9 @@ canvas{
 .footer-menu li a:hover {
   color: #000000;
 }
+.like-blog{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-left: -2px !important;
+  
+}
