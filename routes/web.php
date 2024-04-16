@@ -16,9 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [BlogController::class, 'indexView'])->name('blog.indexView');
-//Route::get('/', function () {
- //return view('welcome');
-//});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -35,5 +32,6 @@ Route::middleware('auth')->group(function () {
 Route::resource('blog', BlogController::class)
     ->only(['index', 'store'])
     ->middleware(['auth', 'isAdmin']);
+Route::get('readblog/{id}',[BlogController::class,'show'])->name('readblog'); 
 
 require __DIR__.'/auth.php';
