@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\BlogController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [BlogController::class, 'indexView'])->name('blog.indexView');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+if(Auth::user()->is_admin){
+return view('DashdashboardAdmin');
+}
+return view('dashboard');
+
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/DashdashboardAdmin', function () { return view('DashdashboardAdmin'); })->middleware(['auth','isAdmin'])->name('DashdashboardAdmin');

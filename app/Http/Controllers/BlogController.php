@@ -65,7 +65,8 @@ class BlogController extends Controller
     public function show(Request $request):View
     {
         $blog= Blog::find($request->id);
-        dd($blog->id);
+        //dd($blog->id);
+        return view('readblog',['blog'=>$blog]);
         
     }
 
