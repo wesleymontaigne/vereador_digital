@@ -42,17 +42,15 @@
   <!--header-->
   @include('includes.header')
   <!-- End Header -->
-@php
-    dd($blog);
-@endphp
+
   <!--  Breadcrumbs  -->
   <div class="breadcrumbs">
     <div class="page-header d-flex align-items-center">
       <div class="container position-relative">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-6 text-center">
-            <h2>Blog Details Page Title Here</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+            <h2>{{ $blog->title }}</h2>
+            <p>A verdadeira voz do Brasil</p>
           </div>
         </div>
       </div>
@@ -60,8 +58,8 @@
     <nav>
       <div class="container">
         <ol>
-          <li><a href="index-2.html">Home</a></li>
-          <li>Title here</li>
+          <li><a href="{{ url('/') }}">Home</a></li>
+         
         </ol>
       </div>
     </nav>
@@ -75,14 +73,14 @@
           <div class="row">
             <div class="col-lg-8">
               <h2 class="title">
-                How to create add on google adwords?
+                {{ $blog->title }}
               </h2>
               <div class="d-flex align-items-center details-post-data">
                 <div class="post-meta d-flex">
                   <p class="post-author">Jobi Ret</p>
                   <p class="post-sperator"> - </p>
                   <p class="post-date">
-                    <time datetime="2023-01-01">Oct 5, 2023</time>
+                    <time datetime="2023-01-01">{{ $blog->created_at->format('j M Y, g:i a') }}</time>
                   </p>
                 </div>
               </div>
@@ -197,7 +195,7 @@
                 <div class="col-xl-4 col-lg-4 mb-50">
                     <div class="footer-widget">
                         <div class="footer-logo">
-                            <a href="index-2.html" class="logo d-flex align-items-center">
+                            <a href="{{url('/')}}" class="logo d-flex align-items-center">
                               <img src="assets/images/logo.png" alt="logo">
                             </a>
                         </div>
