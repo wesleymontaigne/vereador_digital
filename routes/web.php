@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TerminalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,7 @@ use App\Http\Controllers\ProfileController;
 Route::get('/', [BlogController::class, 'indexView'])->name('blog.indexView');
 
 Route::get('/dashboard', function () {
-if(Auth::user()->is_admin){
+if(Auth::user()->is_admin){ 
 return view('DashdashboardAdmin');
 }
 return view('dashboard');
@@ -28,6 +29,7 @@ return view('dashboard');
 
 Route::get('/DashdashboardAdmin', function () { return view('DashdashboardAdmin'); })->middleware(['auth','isAdmin'])->name('DashdashboardAdmin');
 
+Route::get('/terminal', [TerminalController::class, 'index'])->name('terminal.index')->middleware(['auth','isAdmin']);
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
