@@ -1,0 +1,2 @@
+#!
+echo "Aa14020410" | sudo -S sudo php artisan serve --host 192.168.18.9 --port 80
