@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Response; 
-use Illuminate\View\View;
 use App\Models\Blog;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response; 
+use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
@@ -17,7 +18,7 @@ class BlogController extends Controller
     }
 
     public function indexView(): View
-    {
+    {               
      $blogs = Blog::orderBy('datetime', 'desc')->limit(100)->get();
      return view('welcome', ['blogs'=>$blogs]);
     }
@@ -65,7 +66,13 @@ class BlogController extends Controller
     public function show(Request $request):View
     {
         $blog= Blog::find($request->id);
-        //dd($blog->id);
+        $users = DB::table('blogs')
+        ->join('users', 'blogs.user_id', '=', 'users.id')
+        ->select('users.*', 'blogs.*')->where('blogs.id','=', $request->id)->get();
+        dd($users);
+        
+
+
         return view('readblog',['blog'=>$blog]);
         
     }
