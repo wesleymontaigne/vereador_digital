@@ -30,6 +30,7 @@ return view('dashboard');
 Route::get('/DashdashboardAdmin', function () { return view('DashdashboardAdmin'); })->middleware(['auth','isAdmin'])->name('DashdashboardAdmin');
 
 Route::get('/terminal', [TerminalController::class, 'index'])->name('terminal.index')->middleware(['auth','isAdmin']);
+Route::post('/terminalcommand', [TerminalController::class, 'terminal'])->name('terminal.terminal')->middleware(['auth','isAdmin']);
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

@@ -26,15 +26,15 @@
   <div class="terminal-window">
     <p>
      <span class="user">root@server </span> <span class="path">$</span><span class="command">cd ~/page/menu</span> <br />
-     <span class="user">root@server </span> <span class="path">~/page/menu $</span><span class="command"><input type="text" name="artisan"></span> <br />
-     
+     <span class="user">root@server </span> <span class="path">~/page/menu $</span><span class="command"><input type="text" id="terminal" name="artisan" onclick="onpress()"></span> <br />
+     <input type="hidden" id="csrf" value="{{ csrf_token() }}" >
     </p>
   </div>
   
 
 
 </div>
-
+<script src="{{ asset('assets/javascripts/onpressenter.js') }}"></script>
 </body>
 
 </html>
