@@ -18,10 +18,10 @@ class TerminalController extends Controller
     'itemid' => 'required|string|max:800',
     ]);
     $stream = fopen("php://output", "w");
-    return $response=Artisan::call("migrate", array(), new StreamOutput($stream));
+    $response=Artisan::call("$request->itemid", array(), new StreamOutput($stream));
     
                 
-    return response()->json(['code' => 200, 'response' => '123']);
+    //return response()->json(['code' => 200, 'response' => $request->itemid]);
        
     }
 }

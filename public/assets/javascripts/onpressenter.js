@@ -22,10 +22,9 @@ headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify(data)
 }).then(res => {
  
-     str = res.text().then(text => { throw new Error(text) })
-     return str.substring(str.indexOf(":") + 1);
- 
-console.log("Request complete! response:", JSON.stringify(res));
+     str = res.text();
+     console.log(JSON.stringify(str ));
+     return str;
 return res.json()
 }).then(json => {
 console.log(json); // add this line

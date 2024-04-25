@@ -1,0 +1,347 @@
+Laravel Framework 10.48.4
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+      --env[=ENV]       The environment the command should run under
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  about                   Display basic information about your application
+  clear-compiled          Remove the compiled class file
+  completion              Dump the shell completion script
+  db                      Start a new database CLI session
+  docs                    Access the Laravel documentation
+  down                    Put the application into maintenance / demo mode
+  env                     Display the current framework environment
+  help                    Display help for a command
+  inspire                 Display an inspiring quote
+  list                    List commands
+  migrate                 Run the database migrations
+  optimize                Cache the framework bootstrap files
+  serve                   Serve the application on the PHP development server
+  test                    Run the application tests
+  tinker                  Interact with your application
+  up                      Bring the application out of maintenance mode
+ auth
+  auth:clear-resets       Flush expired password reset tokens
+ breeze
+  breeze:install          Install the Breeze controllers and resources
+ cache
+  cache:clear             Flush the application cache
+  cache:forget            Remove an item from the cache
+  cache:prune-stale-tags  Prune stale cache tags from the cache (Redis only)
+  cache:table             Create a migration for the cache database table
+ channel
+  channel:list            List all registered private broadcast channels
+ config
+  config:cache            Create a cache file for faster configuration loading
+  config:clear            Remove the configuration cache file
+  config:show             Display all of the values for a given configuration file
+ db
+  db:monitor              Monitor the number of connections on the specified database
+  db:seed                 Seed the database with records
+  db:show                 Display information about the given database
+  db:table                Display information about the given database table
+  db:wipe                 Drop all tables, views, and types
+ env
+  env:decrypt             Decrypt an environment file
+  env:encrypt             Encrypt an environment file
+ event
+  event:cache             Discover and cache the application's events and listeners
+  event:clear             Clear all cached events and listeners
+  event:generate          Generate the missing events and listeners based on registration
+  event:list              List the application's events and listeners
+ key
+  key:generate            Set the application key
+ lang
+  lang:publish            Publish all language files that are available for customization
+ make
+  make:cast               Create a new custom Eloquent cast class
+  make:channel            Create a new channel class
+  make:command            Create a new Artisan command
+  make:component          Create a new view component class
+  make:controller         Create a new controller class
+  make:event              Create a new event class
+  make:exception          Create a new custom exception class
+  make:factory            Create a new model factory
+  make:job                Create a new job class
+  make:listener           Create a new event listener class
+  make:mail               Create a new email class
+  make:middleware         Create a new middleware class
+  make:migration          Create a new migration file
+  make:model              Create a new Eloquent model class
+  make:notification       Create a new notification class
+  make:observer           Create a new observer class
+  make:policy             Create a new policy class
+  make:provider           Create a new service provider class
+  make:request            Create a new form request class
+  make:resource           Create a new resource
+  make:rule               Create a new validation rule
+  make:scope              Create a new scope class
+  make:seeder             Create a new seeder class
+  make:test               Create a new test class
+  make:view               Create a new view
+ migrate
+  migrate:fresh           Drop all tables and re-run all migrations
+  migrate:install         Create the migration repository
+  migrate:refresh         Reset and re-run all migrations
+  migrate:reset           Rollback all database migrations
+  migrate:rollback        Rollback the last database migration
+  migrate:status          Show the status of each migration
+ model
+  model:prune             Prune models that are no longer needed
+  model:show              Show information about an Eloquent model
+ notifications
+  notifications:table     Create a migration for the notifications table
+ optimize
+  optimize:clear          Remove the cached bootstrap files
+ package
+  package:discover        Rebuild the cached package manifest
+ pest
+  pest:dataset            Create a new dataset file
+  pest:test               Create a new test file
+ queue
+  queue:batches-table     Create a migration for the batches database table
+  queue:clear             Delete all of the jobs from the specified queue
+  queue:failed            List all of the failed queue jobs
+  queue:failed-table      Create a migration for the failed queue jobs database table
+  queue:flush             Flush all of the failed queue jobs
+  queue:forget            Delete a failed queue job
+  queue:listen            Listen to a given queue
+  queue:monitor           Monitor the size of the specified queues
+  queue:prune-batches     Prune stale entries from the batches database
+  queue:prune-failed      Prune stale entries from the failed jobs table
+  queue:restart           Restart queue worker daemons after their current job
+  queue:retry             Retry a failed queue job
+  queue:retry-batch       Retry the failed jobs for a batch
+  queue:table             Create a migration for the queue jobs database table
+  queue:work              Start processing jobs on the queue as a daemon
+ route
+  route:cache             Create a route cache file for faster route registration
+  route:clear             Remove the route cache file
+  route:list              List all registered routes
+ sail
+  sail:add                Add a service to an existing Sail installation
+  sail:install            Install Laravel Sail's default Docker Compose file
+  sail:publish            Publish the Laravel Sail Docker files
+ sanctum
+  sanctum:prune-expired   Prune tokens expired for more than specified number of hours
+ schedule
+  schedule:clear-cache    Delete the cached mutex files created by scheduler
+  schedule:interrupt      Interrupt the current schedule run
+  schedule:list           List all scheduled tasks
+  schedule:run            Run the scheduled commands
+  schedule:test           Run a scheduled command
+  schedule:work           Start the schedule worker
+ schema
+  schema:dump             Dump the given database schema
+ session
+  session:table           Create a migration for the session database table
+ storage
+  storage:link            Create the symbolic links configured for the application
+  storage:unlink          Delete existing symbolic links configured for the application
+ stub
+  stub:publish            Publish all stubs that are available for customization
+ vendor
+  vendor:publish          Publish any publishable assets from vendor packages
+ view
+  view:cache              Compile all of the application's Blade templates
+  view:clear              Clear all compiled view files
+  
+  <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px Arial;  
+}
+
+/*the container must be positioned relative:*/
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+</style>
+</head>     
+<body>
+
+<h2>Autocomplete</h2>
+
+<p>Start typing:</p>
+
+<!--Make sure the form has the autocomplete function switched off:-->
+<form autocomplete="off" action="/action_page.php">
+  <div class="autocomplete" style="width:300px;">
+    <input id="myInput" type="text" name="myCountry" placeholder="Country">
+  </div>
+  <input type="submit">
+</form>
+
+<script>
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+/*An array containing all the country names in the world:*/
+var countries = ["docs","docs","env","help","inspire","list","migrate","optimize","test","up","auth:clear-resets","breeze:install","cache:clear","cache:forget","cache:prune-stale-tags","cache:table"];
+
+/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), countries);
+</script>
+
+</body>
+</html>
+
